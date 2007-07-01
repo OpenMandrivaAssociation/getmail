@@ -1,5 +1,5 @@
 %define name getmail
-%define version 4.7.4
+%define version 4.7.5
 %define release %mkrel 1
 
 Name:		%{name}
@@ -35,7 +35,7 @@ should not be attempted over NFS.  getmail is written entirely in python.
 %install
 rm -rf $RPM_BUILD_ROOT
 python setup.py install --root=$RPM_BUILD_ROOT 
-
+rm -Rf $RPM_BUILD_ROOT/usr/share/doc/%{name}-%{version}
 %clean
 rm -rf $RPM_BUILD_ROOT
 
