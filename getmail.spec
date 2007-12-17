@@ -14,7 +14,6 @@ Source:		http://pyropus.ca/software/getmail/old-versions/%{name}-%{version}.tar.
 Requires:	python
 BuildRequires:  python-devel 
 BuildArch:	noarch
-Buildroot:	%{_tmppath}/%{name}-buildroot
 
 
 %description
