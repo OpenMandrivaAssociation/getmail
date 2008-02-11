@@ -1,5 +1,5 @@
 %define name getmail
-%define version 4.7.6
+%define version 4.7.8
 %define release %mkrel 1
 
 Name:		%{name}
@@ -10,7 +10,7 @@ Release:	%{release}
 License:	GPL
 Group:		Networking/Mail
 URL:		http://pyropus.ca/software/getmail/
-Source:		http://pyropus.ca/software/getmail/old-versions/%{name}-%{version}.tar.bz2
+Source:		http://pyropus.ca/software/getmail/old-versions/%{name}-%{version}.tar.gz
 Requires:	python
 BuildRequires:  python-devel 
 BuildArch:	noarch
@@ -29,6 +29,8 @@ should not be attempted over NFS.  getmail is written entirely in python.
 %prep
 
 %setup -q
+# workaround a bug in 4.7.8
+perl -pi -e 's/^.*getmail\.spec.*$//' setup.py 
 
 %build
 
@@ -36,6 +38,7 @@ should not be attempted over NFS.  getmail is written entirely in python.
 rm -rf $RPM_BUILD_ROOT
 python setup.py install --root=$RPM_BUILD_ROOT 
 rm -Rf $RPM_BUILD_ROOT/usr/share/doc/%{name}-%{version}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
