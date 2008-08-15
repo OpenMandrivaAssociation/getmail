@@ -1,5 +1,5 @@
 %define name getmail
-%define version 4.8.2
+%define version 4.8.3
 %define release %mkrel 1
 
 Name:		%{name}
