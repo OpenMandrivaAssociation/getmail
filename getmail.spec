@@ -1,6 +1,6 @@
 %define name getmail
-%define version 4.8.4
-%define release %mkrel 2
+%define version 4.9.0
+%define release %mkrel 1
 
 Name:		%{name}
 Summary:	POP3 mail retriever with reliable Maildir delivery
