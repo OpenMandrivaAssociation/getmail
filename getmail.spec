@@ -1,12 +1,7 @@
-%define name getmail
-%define version 4.16.0
-%define release %mkrel 1
-
-Name:		%{name}
+Name:		getmail
 Summary:	POP3 mail retriever with reliable Maildir delivery
-Version:	%{version}
-Release:	%{release}
-
+Version:	4.20.0
+Release:	%mkrel 1
 License:	GPL
 Group:		Networking/Mail
 URL:		http://pyropus.ca/software/getmail/
