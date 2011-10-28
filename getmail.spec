@@ -1,6 +1,6 @@
 Name:		getmail
 Summary:	POP3 mail retriever with reliable Maildir delivery
-Version:	4.20.2
+Version:	4.22.1
 Release:	%mkrel 1
 License:	GPL
 Group:		Networking/Mail
@@ -31,8 +31,8 @@ perl -pi -e 's/^.*getmail\.spec.*$//' setup.py
 
 %install
 rm -rf $RPM_BUILD_ROOT
-python setup.py install --root=$RPM_BUILD_ROOT 
-rm -Rf $RPM_BUILD_ROOT/usr/share/doc/%{name}-%{version}
+python setup.py install --root=%{buildroot}
+rm -Rf %{buildroot}%{_datadir}/doc/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -42,7 +42,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc docs/*
 %{py_puresitedir}/getmailcore/
 %{py_puresitedir}/*.egg-info
-%_bindir/getmail*
-%_mandir/man1/*
+%{_bindir}/getmail*
+%{_mandir}/man1/*
 
 
