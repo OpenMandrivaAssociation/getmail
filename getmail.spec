@@ -1,15 +1,14 @@
 Name:		getmail
 Summary:	POP3 mail retriever with reliable Maildir delivery
-Version:	4.23.0
-Release:	%mkrel 1
+Version:	4.27.0
+Release:	1
 License:	GPLv2
 Group:		Networking/Mail
 URL:		http://pyropus.ca/software/getmail/
-Source:		http://pyropus.ca/software/getmail/old-versions/%{name}-%{version}.tar.gz
+Source0:	http://pyropus.ca/software/getmail/old-versions/%{name}-%{version}.tar.gz
 Requires:	python
 BuildRequires:	python-devel
 BuildArch:	noarch
-Buildroot:	%{_tmppath}/%{name}-buildroot
 
 %description
 getmail is intended as a simple replacement for fetchmail for those people
@@ -31,15 +30,9 @@ rm -rf %{buildroot}
 python setup.py install --root=%{buildroot}
 rm -Rf %{buildroot}%{_datadir}/doc/%{name}-%{version}
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc docs/*
 %{py_puresitedir}/getmailcore/
 %{py_puresitedir}/*.egg-info
 %{_bindir}/getmail*
 %{_mandir}/man1/*
-
-
