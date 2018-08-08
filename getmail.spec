@@ -1,11 +1,6 @@
-%if %mdvver < 201500
-%define __python2 %__python
-%define py2_puresitedir %py_puresitedir
-%endif
-
 Name:		getmail
 Summary:	POP3 mail retriever with reliable Maildir delivery
-Version:	5.4
+Version:	5.6
 Release:	1
 License:	GPLv2
 Group:		Networking/Mail
