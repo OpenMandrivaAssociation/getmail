@@ -1,16 +1,12 @@
 Name:		getmail
 Summary:	POP3 mail retriever with reliable Maildir delivery
-Version:	5.8
+Version:	5.11
 Release:	1
 License:	GPLv2
 Group:		Networking/Mail
 URL:		http://pyropus.ca/software/getmail/
 Source0:	http://pyropus.ca/software/getmail/old-versions/%{name}-%{version}.tar.gz
-%if %mdvver >= 201500
 Requires:	python2
-%else
-Requires:	python
-%endif
 BuildRequires:	pkgconfig(python2)
 BuildArch:	noarch
 
