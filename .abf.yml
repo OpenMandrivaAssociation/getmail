@@ -1,4 +1,2 @@
-removed_sources:
-  getmail-5.11.tar.gz: 5a88b8b81c583f2fc6ce01d26fde5d7eee12dc42
 sources:
-  getmail-5.13.tar.gz: 17c592611b1b17655c01ea9955f1dc815dbae166
+  getmail-5.14.tar.gz: 03cc39ca8a5533abc8e88f460a251f92f2f2e2c3
