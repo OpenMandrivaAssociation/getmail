@@ -1,13 +1,15 @@
 Name:		getmail
 Summary:	POP3 mail retriever with reliable Maildir delivery
-Version:	5.14
-Release:	1
+Version:	6.02
+Release:	0.1
 License:	GPLv2
 Group:		Networking/Mail
 URL:		http://pyropus.ca/software/getmail/
-Source0:	http://pyropus.ca/software/getmail/old-versions/%{name}-%{version}.tar.gz
-Requires:	python2
-BuildRequires:	pkgconfig(python2)
+#Source0:	http://pyropus.ca/software/getmail/old-versions/%{name}-%{version}.tar.gz
+# switch to python3 branch at https://github.com/getmail6/getmail6
+Source0:	getmail6-master.zip
+Requires:	python
+BuildRequires:	pkgconfig(python3)
 BuildArch:	noarch
 
 %description
@@ -19,21 +21,19 @@ per-account basis. It can also deliver into mbox files, although this
 should not be attempted over NFS. getmail is written entirely in python.
 
 %prep
-%setup -q
-# workaround a bug in 4.7.8
-perl -pi -e 's/^.*getmail\.spec.*$//' setup.py
+%setup -qn getmail6-master
 
 %build
 
 %install
 rm -rf %{buildroot}
-%__python2 setup.py install --root=%{buildroot}
+%__python3 setup.py install --root=%{buildroot}
 rm -Rf %{buildroot}%{_datadir}/doc/%{name}-%{version}
 
 %files
 %doc docs/*
-%{py2_puresitedir}/getmailcore/
-%{py2_puresitedir}/*.egg-info
+%{py3_puresitedir}/getmailcore/
+%{py3_puresitedir}/*.egg-info
 %{_bindir}/getmail*
 %{_mandir}/man1/*
 
