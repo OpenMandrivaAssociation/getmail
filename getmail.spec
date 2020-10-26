@@ -1,13 +1,11 @@
 Name:		getmail
 Summary:	POP3 mail retriever with reliable Maildir delivery
-Version:	6.02
-Release:	0.1
+Version:	6.8
+Release:	1
 License:	GPLv2
 Group:		Networking/Mail
-URL:		http://pyropus.ca/software/getmail/
-#Source0:	http://pyropus.ca/software/getmail/old-versions/%{name}-%{version}.tar.gz
-# switch to python3 branch at https://github.com/getmail6/getmail6
-Source0:	getmail6-master.zip
+URL:		http://getmail6.org
+Source0:	https://github.com/getmail6/getmail6/archive/v6.8.tar.gz
 Requires:	python
 BuildRequires:	pkgconfig(python3)
 BuildArch:	noarch
@@ -21,7 +19,7 @@ per-account basis. It can also deliver into mbox files, although this
 should not be attempted over NFS. getmail is written entirely in python.
 
 %prep
-%setup -qn getmail6-master
+%setup -qn getmail6-%{version}
 
 %build
 
