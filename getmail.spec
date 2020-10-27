@@ -8,6 +8,7 @@ URL:		http://getmail6.org
 Source0:	https://github.com/getmail6/getmail6/archive/v6.8.tar.gz
 Requires:	python
 BuildRequires:	pkgconfig(python3)
+BuildRequires:	python3egg(setuptools)
 BuildArch:	noarch
 
 %description
