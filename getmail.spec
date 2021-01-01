@@ -1,13 +1,13 @@
 Name:		getmail
 Summary:	POP3 mail retriever with reliable Maildir delivery
-Version:	6.8
+Version:	6.12
 Release:	1
 License:	GPLv2
 Group:		Networking/Mail
 URL:		http://getmail6.org
-Source0:	https://github.com/getmail6/getmail6/archive/v6.8.tar.gz
+Source0:	https://github.com/getmail6/getmail6/archive/v%{version}.tar.gz
 Requires:	python
-BuildRequires:	pkgconfig(python3)
+BuildRequires:	pkgconfig(python)
 BuildRequires:	python3egg(setuptools)
 BuildArch:	noarch
 
