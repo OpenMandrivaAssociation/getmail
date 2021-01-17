@@ -1,6 +1,6 @@
 Name:		getmail
 Summary:	POP3 mail retriever with reliable Maildir delivery
-Version:	6.12
+Version:	6.14
 Release:	1
 License:	GPLv2
 Group:		Networking/Mail
