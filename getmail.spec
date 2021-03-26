@@ -5,7 +5,7 @@ Release:	1
 License:	GPLv2
 Group:		Networking/Mail
 URL:		http://getmail6.org
-Source0:	https://github.com/getmail6/getmail6/archive/v%{version}.tar.gz
+Source0:	https://github.com/getmail6/getmail6/archive/v%{version}/%{name}-%{version}.tar.gz
 Requires:	python
 BuildRequires:	pkgconfig(python)
 BuildRequires:	python3dist(setuptools)
