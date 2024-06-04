@@ -1,11 +1,11 @@
 %define _empty_manifest_terminate_build 0
 Name:		getmail
 Summary:	POP3 mail retriever with reliable Maildir delivery
-Version:	6.18.14
+Version:	6.19.00
 Release:	1
 License:	GPLv2
 Group:		Networking/Mail
-URL:		http://getmail6.org
+URL:		https://getmail6.org
 Source0:	https://github.com/getmail6/getmail6/archive/v%{version}/%{name}6-%{version}.tar.gz
 Requires:	python
 BuildRequires:	pkgconfig(python)
