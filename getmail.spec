@@ -1,7 +1,7 @@
 %define _empty_manifest_terminate_build 0
 Name:		getmail
 Summary:	POP3 mail retriever with reliable Maildir delivery
-Version:	6.19.00
+Version:	6.19.01
 Release:	1
 License:	GPLv2
 Group:		Networking/Mail
