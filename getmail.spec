@@ -1,8 +1,8 @@
 %define _empty_manifest_terminate_build 0
 Name:		getmail
 Summary:	POP3 mail retriever with reliable Maildir delivery
-Version:	6.19.05
-Release:	2
+Version:	6.20.0
+Release:	1
 License:	GPLv2
 Group:		Networking/Mail
 URL:		https://getmail6.org
@@ -21,7 +21,7 @@ per-account basis. It can also deliver into mbox files, although this
 should not be attempted over NFS. getmail is written entirely in python.
 
 %prep
-%setup -qn getmail6-%{version}
+%setup -qn getmail6-%{version} -n getmail6-6.20.00
 
 %build
 
