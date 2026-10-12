@@ -31,7 +31,7 @@ rm -rf %{buildroot}
 rm -Rf %{buildroot}%{_datadir}/doc/%{name}-%{version}
 
 %files
-%doc docs/*
+%doc docs/* README
 %{py3_puresitedir}/getmailcore/
 %{py3_puresitedir}/*.egg-info
 %{_bindir}/getmail*
